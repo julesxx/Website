@@ -1,0 +1,26 @@
+// Mixins
+@import url('https://fonts.googleapis.com/css?family=Neucha|Open+Sans');
+
+
+@mixin transition-all() {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+@mixin background-cover() {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+@mixin sans-serif-font() {
+  font-family: 'Open Sans', sans-serif;
+}
+
+@mixin head-font(){
+  font-family: 'Neucha', cursive;
+    
+  font-weight: 400;
+  
+}
+

@@ -1,4 +1,12 @@
 <?php get_header(); ?>
+    <header class="container_fluid demo-1 ">
+        <div class="content">
+            <div id="large-header" class="large-header">
+                <canvas id="demo-canvas"></canvas>
+               <img style="width: 25%; min-width: 200px;" class="main-title animated  tada" src="<?php echo get_bloginfo( 'template_directory' );?>/img/logo/logo.png" />
+
+        </div>
+    </header>
 
 <section class="bg-primary" id="about">
     <div class="container">
@@ -15,14 +23,7 @@
 </section>
 
 <section id="services">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Meine Fähigkeiten</h2>
-                <hr class="my-4">
-            </div>
-        </div>
-    </div>
+
     <div class="container">
         <div class="row">
 

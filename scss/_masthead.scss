@@ -22,8 +22,8 @@
 	padding: 0;
 	color: #f9f1e9;
 	text-align: center;
-	top: 50%;
-	left: 35%;
+	top: 20%;
+	left: 40%;
 	-webkit-transform: translate3d(-50%,-50%,0);
 	transform: translate3d(-50%,-50%,0);
 	@include head-font;
@@ -52,11 +52,17 @@
 		font-size: 4em;
 	}
 }
-
-header{
+.entry-header{
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
   background-image: url('../img/header.png');
+  background-position: center center;
+  @include background-cover;
+}
+header{
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 56px);
+
   background-position: center center;
   @include background-cover;
   hr {

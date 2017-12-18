@@ -20,28 +20,21 @@
 
 
 </head>
+<?php if ( is_front_page()  ) {
+    echo '<body  id="page-top" >';
+}else{
+    echo '<body >';
+}?>
 
-<body  id="page-top" >
 
 
 
-
-
-<header class="container_fluid demo-1 ">
-    <div class="content">
-        <div id="large-header" class="large-header">
-            <canvas id="demo-canvas"></canvas>
-            <h1 class="main-title animated  tada">Joel Winter</h1>
-        </div>
-
-    </div>
-</header>
 
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container ">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Joel Winter</a>
+        <a class="navbar-brand js-scroll-trigger text-left" href="#page-top"><img style="width: 50px;" src="<?php echo get_bloginfo( 'template_directory' );?>/img/logo/logo.png" />    Joel Winter</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

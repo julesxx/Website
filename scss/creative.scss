@@ -14,3 +14,15 @@
   fill: currentColor;
 }
 
+.content_right, .content_left{
+  float: left;
+  width: 45%;
+}
+.content_left{
+  padding-right: 5%;
+}
+
+
+.posthead{
+  color: $primary;
+}

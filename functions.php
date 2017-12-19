@@ -73,3 +73,60 @@ add_action('wp_footer', 'add_my_scripts');
 ?>
 
 
+<?php add_theme_support( 'post-thumbnails' ); ?>
+
+  <?php  function my_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/logo/logo.png);
+
+            background-size: 100%;
+            background-repeat: no-repeat;
+            padding-bottom: 30px;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+?>
+
+<?php
+function my_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+function my_login_logo_url_title() {
+    return 'Your Site Name and Info';
+}
+add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+
+
+if (class_exists('MultiPostThumbnails')) {
+
+    new MultiPostThumbnails(array(
+        'label' => 'Secondary Image',
+        'id' => 'secondary-image',
+        'post_type' => 'post'
+    ) );
+
+};
+
+if (class_exists('MultiPostThumbnails')) {
+
+    new MultiPostThumbnails(array(
+        'label' => 'Third Image',
+        'id' => 'third-image',
+        'post_type' => 'post'
+    ) );
+
+};
+
+
+require_once get_template_directory() . '/wp-bootstrap-navwalker.php';
+
+register_nav_menus( array(
+    'primary' => __( 'Primary Menu', 'joelwinter' ),
+) );
+
+?>

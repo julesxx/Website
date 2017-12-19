@@ -31,7 +31,6 @@
 
 
 
-<!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container ">
         <a class="navbar-brand js-scroll-trigger text-left" href="#page-top"><img style="width: 50px;" src="<?php echo get_bloginfo( 'template_directory' );?>/img/logo/logo.png" />    Joel Winter</a>
@@ -39,20 +38,25 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">Über mich</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#services">Fähigkeiten</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact">Kontakt</a>
-                </li>
-            </ul>
+
+            <?php
+            wp_nav_menu( array(
+                    'theme_location'    => 'primary',
+                    'depth'             => 4,
+                    'container'         => 'div',
+                    'container_class'   => 'collapse navbar-collapse',
+                    'container_id'      => 'bs-example-navbar-collapse-1',
+                    'menu_class'        => 'nav navbar-nav',
+                    'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                    'walker'            => new WP_Bootstrap_Navwalker())
+            );
+            ?>
         </div>
     </div>
 </nav>
+
+
+
+
+
+

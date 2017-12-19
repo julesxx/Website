@@ -83,99 +83,36 @@
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">Portfolio</h2>
                 <hr class="my-4">
-            </div>
+            </div>  <?php $catquery = new WP_Query( 'cat=7&posts_per_page=5' ); ?>
+
+
+            <?php while($catquery->have_posts()) : $catquery->the_post(); ?>
+
             <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="<?php echo get_bloginfo( 'template_directory' ); ?>/img/fullsize/1.png">
-                    <img class="img-fluid" src="<?php echo get_bloginfo( 'template_directory' ); ?>/img/portfolio/thumbnails/1.png" alt="">
+
+
+
+
+                <a class="portfolio-box" href="<?php the_permalink() ?>">
+                    <img class="img-fluid" src="<?php echo the_post_thumbnail_url("full")?>" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category text-faded">
                                 Webentwicklung
                             </div>
                             <div class="project-name">
-                                Thesio - Kevin Storch & Joel Winter
+                                <?php the_title(); ?>
                             </div>
                         </div>
                     </div>
                 </a>
+
             </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="<?php echo get_bloginfo( 'template_directory' ); ?>/img/portfolio/fullsize/2.jpg">
-                    <img class="img-fluid" src="<?php echo get_bloginfo( 'template_directory' ); ?>/img/portfolio/thumbnails/2.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Print-Produkt
-                            </div>
-                            <div class="project-name">
-                                Digitale Fotografie|Fotobuch
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="<?php echo get_bloginfo( 'template_directory' ); ?>/img/portfolio/fullsize/3.jpg">
-                    <img class="img-fluid" src="<?php echo get_bloginfo( 'template_directory' ); ?>/img/portfolio/thumbnails/3.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Web und App-Entwicklung
-                            </div>
-                            <div class="project-name">
-                                Philostify | noch nicht zugänglich
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="<?php echo get_bloginfo( 'template_directory' ); ?>/img/portfolio/fullsize/4.jpg">
-                    <img class="img-fluid" src="<?php echo get_bloginfo( 'template_directory' ); ?>/img/portfolio/thumbnails/4.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="<?php echo get_bloginfo( 'template_directory' ); ?>/img/portfolio/fullsize/5.jpg">
-                    <img class="img-fluid" src="<?php echo get_bloginfo( 'template_directory' ); ?>/img/portfolio/thumbnails/5.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="<?php echo get_bloginfo( 'template_directory' ); ?>/img/portfolio/fullsize/6.jpg">
-                    <img class="img-fluid" src="<?php echo get_bloginfo( 'template_directory' ); ?>/img/portfolio/thumbnails/6.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
+            <?php endwhile;
+            wp_reset_postdata();
+
+            ?>
+
 </section>
 
 
@@ -209,7 +146,6 @@
         </div>
     </div>
 </section>
-
 
 
 

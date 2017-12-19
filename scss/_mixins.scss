@@ -1,7 +1,7 @@
 // Mixins
 @import url('https://fonts.googleapis.com/css?family=Neucha|Open+Sans');
 
-
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700');
 @mixin transition-all() {
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -14,7 +14,7 @@
   background-size: cover;
 }
 @mixin sans-serif-font() {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto Mono', monospace;
 }
 
 @mixin head-font(){

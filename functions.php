@@ -10,7 +10,7 @@ function add_my_styles() {
     wp_enqueue_style( 'font-awesome' );
 
 
-    wp_register_style( 'fontOpen', 'https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800');
+    wp_register_style( 'fontOpen', 'https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700');
     wp_enqueue_style( 'fontOpen' );
     wp_register_style( 'fontMerri', 'https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic');
     wp_enqueue_style( 'fontMerri' );

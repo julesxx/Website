@@ -17,19 +17,21 @@ $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
 
     <header class="container_fluid demo-1 ">
         <div class="content">
-            <?php echo '   <div id="large-header"  style="background: url(' . $url . '); background-repeat:no-repeat;  background-size:1920px 1080px;">' ?>
+            <?php echo '   <div id="large-header"  style="background: url(' . $url . '); background-repeat:no-repeat;  background-size:width:100%">' ?>
             <canvas></canvas>
             <h1 class="text-center posthead"> <?php echo esc_html(get_the_title()); ?> </h1>
         </div>
     </header>
 
-
-<div class="container">
+<div class="container_fluid <?php if(in_category(5)){print_r("webdev");} elseif(in_category(11)){print_r("print");}?> ">
+<div class="container top  ">
     <div class="row">
-        <div class="col-xs-12 col-md-6 text-left ">
-            <?php
-            $content = get_the_content();
-            echo $content;
+
+        <?php
+        $content = get_the_content();?>
+        <div class='col-xs-12 col-md-6 text-left '>
+
+            <?php echo $content;
 
 
             /*
@@ -59,15 +61,15 @@ $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
 
             ?>
         </div>
-        <div class="col-xs-12 col-md-6 text-center" >
-           <?php the_post_thumbnail( 'full' ); ?>
+        <div class="col-xs-12 col-md-6 text-center polaroids" >
+
 
            <?php
 
            if (class_exists('MultiPostThumbnails')) :
 
                MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image');
-
+               MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'third-image');
            endif;
 
            ?>
@@ -77,9 +79,10 @@ $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
     </div>
 
 </div>
-
+</div>
 
 </main><!-- .site-main -->
 </div><!-- .content-area -->
+
 
 <?php get_footer(); ?>

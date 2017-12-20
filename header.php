@@ -14,8 +14,8 @@
 
 
 
-
-
+    <link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon/favicon.ico" type="image/png" />
+    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon/favicon.ico" type="image/png" />
 
 
 
@@ -33,24 +33,25 @@
 
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container ">
-J        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand js-scroll-trigger" href="<?php echo get_home_url(); ?>"><img src="<?php echo get_template_directory_uri()?>/img/logo/logo.png" style="width: 50px;"> Joel Winter </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+
 
             <?php
             wp_nav_menu( array(
                     'theme_location'    => 'primary',
-                    'depth'             => 4,
+                    'depth'             => 10,
                     'container'         => 'div',
                     'container_class'   => 'collapse navbar-collapse',
-                    'container_id'      => 'bs-example-navbar-collapse-1',
-                    'menu_class'        => 'nav navbar-nav',
+                    'container_id'      => 'navbarResponsive',
+                    'menu_class'        => 'navbar-nav ml-auto',
                     'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                     'walker'            => new WP_Bootstrap_Navwalker())
             );
             ?>
-        </div>
+
     </div>
 </nav>
 

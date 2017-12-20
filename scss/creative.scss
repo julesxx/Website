@@ -27,3 +27,54 @@
   color: $primary;
 }
 
+.top{
+  margin-top:50px;
+}
+
+  .polaroids {
+    img {
+      -webkit-transition: -webkit-transform .15s linear;
+      -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+      -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+      width: 100%;
+      margin-bottom: 50px;
+    }
+
+  }
+
+.ml-auto{
+  li{
+    a{
+      @include sans-serif-font;
+
+      padding:10px;
+      width:100%;}
+  }
+  .menu-item{
+    li{
+      a{
+        padding:0px;
+        width:100%;}
+    }
+  }
+}
+
+.dropdown-menu{
+  border-radius: 0;
+  width:100%;
+}
+  //Projektarten
+
+.webdev{
+  background: $primary;
+  color: $white;
+  padding: 100px;
+}
+
+.print{
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+  padding: 100px;
+  font-family: 'Alegreya', serif;
+}
+

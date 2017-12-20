@@ -15,6 +15,12 @@ function add_my_styles() {
     wp_register_style( 'fontMerri', 'https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic');
     wp_enqueue_style( 'fontMerri' );
 
+
+
+    wp_register_style( 'fontSerif', 'https://fonts.googleapis.com/css?family=Alegreya');
+    wp_enqueue_style( 'fontSerif' );
+
+
     wp_register_style( 'magnific', '/wp-content/themes/JoelWinter/vendor/magnific-popup/magnific-popup.css');
     wp_enqueue_style( 'magnific' );
 
@@ -129,4 +135,20 @@ register_nav_menus( array(
     'primary' => __( 'Primary Menu', 'joelwinter' ),
 ) );
 
+?>
+
+<?php function is_subcategory( $cat_id = NULL ) {
+
+    if ( !$cat_id )
+        $cat_id = get_query_var( 'cat' );
+
+    if ( $cat_id ) {
+
+        $cat = get_category( $cat_id );
+        if ( $cat->category_parent > 0 )
+            return true;
+    }
+
+    return false;
+}
 ?>

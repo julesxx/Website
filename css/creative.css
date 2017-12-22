@@ -211,7 +211,7 @@ header {
         font-size: 3rem; } }
   @media (min-width: 1200px) {
     header h1 {
-      font-size: 4rem; } }
+      font-size: 6rem; } }
 
 .service-box {
   max-width: 400px; }
@@ -304,15 +304,21 @@ header {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
   width: 100%;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  height: auto !important; }
 
 .ml-auto li a {
   font-family: 'Roboto Mono', monospace;
   padding: 10px;
   width: 100%; }
+.ml-auto .dropdown-menu {
+  border: none; }
 .ml-auto .menu-item li a {
   padding: 0px;
   width: 100%; }
+
+#large-header {
+  height: 800px !important; }
 
 .dropdown-menu {
   border-radius: 0;
@@ -328,5 +334,18 @@ header {
   background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
   padding: 100px;
   font-family: 'Alegreya', serif; }
+
+header {
+  height: auto !important; }
+
+header {
+  position: relative;
+  height: 300px;
+  background-image: url("../img/header.png");
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+  /* change the calc height to a percentage height to get alternate responsive behavior*/ }
+
+section {
+  margin-top: -5vw; }
 
 /*# sourceMappingURL=creative.css.map */

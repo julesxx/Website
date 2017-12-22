@@ -1,12 +1,12 @@
 <?php get_header(); ?>
-    <header class="container_fluid demo-1 ">
-        <div class="content">
-            <div id="large-header" class="large-header">
-                <canvas id="demo-canvas"></canvas>
-               <img style="width: 25%; min-width: 200px;" class="main-title animated  tada" src="<?php echo get_bloginfo( 'template_directory' );?>/img/logo/logo.png" />
 
-        </div>
+    <header class="container_fluid ">
+        <div class="content">
+            <?php echo '   <div id="large-header" style="background: url(' . $url . '); background-repeat:no-repeat;  background-size:width:100%"  >' ?>
+            <canvas></canvas>
+            <img style="width: 25%; min-width: 200px;" class="main-title animated  tada" src="<?php echo get_bloginfo( 'template_directory' );?>/img/logo/logo.png" />        </div>
     </header>
+
 
 <section class="bg-primary" id="about">
     <div class="container">

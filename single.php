@@ -15,16 +15,16 @@ the_post();
 $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
 ?>
 
-    <header class="container_fluid demo-1 ">
+    <header class="container_fluid ">
         <div class="content">
-            <?php echo '   <div id="large-header"  style="background: url(' . $url . '); background-repeat:no-repeat;  background-size:width:100%">' ?>
+            <?php echo '   <div id="large-header" style="background: url(' . $url . '); background-repeat:no-repeat;  background-size:width:100%"  >' ?>
             <canvas></canvas>
             <h1 class="text-center posthead"> <?php echo esc_html(get_the_title()); ?> </h1>
         </div>
     </header>
 
-<div class="container_fluid <?php if(in_category(5)){print_r("webdev");} elseif(in_category(11)){print_r("print");}?> ">
-<div class="container top  ">
+<section class="container_fluid <?php if(in_category(5)){print_r("webdev");} elseif(in_category(11)){print_r("print");}?> ">
+<div class="container">
     <div class="row">
 
         <?php
@@ -79,7 +79,7 @@ $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
     </div>
 
 </div>
-</div>
+</section>
 
 </main><!-- .site-main -->
 </div><!-- .content-area -->
